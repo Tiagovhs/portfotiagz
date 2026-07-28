@@ -37,7 +37,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          file: ./Dockerfile
+          file: ./DockerFile
           push: true
           tags: |
             ghcr.io/${{ steps.owner.outputs.name }}/portfolio:latest
