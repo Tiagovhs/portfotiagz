@@ -1,0 +1,31 @@
+<section id="contact" class="contact-section section-base">
+  <div class="section-header">
+    <div class="section-label">
+      <div class="section-icon">✉</div>
+      <span>Contact</span>
+    </div>
+    <app-mascot outfit="contact" [size]="280"/>
+  </div>
+  <h2 class="section-h2">Travaillons ensemble</h2>
+
+  <p class="contact-intro">Disponible pour des missions freelance</p>
+
+  <ul class="contact-list">
+    <li class="contact-item">
+      <span class="contact-key">Email</span>
+      <a [href]="'mailto:' + profile.contact.email" class="contact-link">{{ profile.contact.email }}</a>
+    </li>
+    <li class="contact-item">
+      <span class="contact-key">GitHub</span>
+      <a [href]="'https://' + profile.contact.github" target="_blank" rel="noopener" class="contact-link">{{ profile.contact.github }}</a>
+    </li>
+    <li class="contact-item">
+      <span class="contact-key">LinkedIn</span>
+      <a [href]="'https://' + profile.contact.linkedin" target="_blank" rel="noopener" class="contact-link">{{ profile.contact.linkedin }}</a>
+    </li>
+    <li class="contact-item">
+      <span class="contact-key">Localisation</span>
+      <span>{{ profile.contact.location }}</span>
+    </li>
+  </ul>
+</section>

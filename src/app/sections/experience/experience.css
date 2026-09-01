@@ -1,0 +1,47 @@
+.exp-list { display: flex; flex-direction: column; }
+
+.exp-row {
+  display: grid;
+  grid-template-columns: 150px 1fr 220px;
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  align-items: start;
+}
+.exp-row.last { border-bottom: 1px solid var(--line); }
+
+.exp-dates {
+  font-family: 'Barlow Condensed', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: .02em;
+  padding-top: 2px;
+}
+
+.exp-role {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.exp-company {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.exp-desc { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; }
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+  padding-top: 2px;
+}
+
+@media (max-width: 1023px) {
+  .exp-row { grid-template-columns: 1fr; gap: 12px; }
+  .exp-tags { justify-content: flex-start; }
+}

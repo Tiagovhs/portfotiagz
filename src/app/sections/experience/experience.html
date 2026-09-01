@@ -1,0 +1,28 @@
+<section id="experience" class="experience-section section-base">
+  <div class="section-header">
+    <div class="section-label">
+      <div class="section-icon">◈</div>
+      <span>Expérience</span>
+    </div>
+    <app-mascot outfit="experience" [size]="280"/>
+  </div>
+  <h2 class="section-h2">Parcours</h2>
+
+  <div class="exp-list">
+    @for (exp of experiences; track exp.dates; let last = $last) {
+      <div class="exp-row" [class.last]="last">
+        <div class="exp-dates">{{ exp.dates }}</div>
+        <div class="exp-main">
+          <div class="exp-role">{{ exp.role }}</div>
+          <div class="exp-company">{{ exp.company }}</div>
+          <p class="exp-desc">{{ exp.description }}</p>
+        </div>
+        <div class="exp-tags">
+          @for (tag of exp.tags; track tag) {
+            <span class="tag">{{ tag }}</span>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>

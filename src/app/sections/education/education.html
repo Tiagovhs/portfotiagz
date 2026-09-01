@@ -1,0 +1,24 @@
+<section id="education" class="education-section section-base">
+  <div class="section-header">
+    <div class="section-label">
+      <div class="section-icon">◎</div>
+      <span>Formation</span>
+    </div>
+    <app-mascot outfit="education" [size]="280"/>
+  </div>
+  <h2 class="section-h2">Parcours académique</h2>
+
+  <div class="edu-grid">
+    @for (edu of education; track edu.degree) {
+      <div class="edu-card reg-mark">
+        <span class="rm-bl">+</span><span class="rm-br">+</span>
+        <div class="edu-dates">{{ edu.dates }}</div>
+        <h3 class="edu-degree">{{ edu.degree }}</h3>
+        <div class="edu-school">{{ edu.school }}</div>
+        <div class="edu-note">
+          <span class="tag">{{ edu.note }}</span>
+        </div>
+      </div>
+    }
+  </div>
+</section>

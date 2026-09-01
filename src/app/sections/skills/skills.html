@@ -1,0 +1,29 @@
+<section id="skills" class="skills-section section-base">
+  <div class="section-header">
+    <div class="section-label">
+      <div class="section-icon">⌨</div>
+      <span>Compétences</span>
+    </div>
+    <app-mascot outfit="skills" [size]="280"/>
+  </div>
+  <h2 class="section-h2">Stack technique</h2>
+
+  <div class="skills-grid">
+    @for (cat of categories; track cat) {
+      <div class="skills-col">
+        <div class="skills-cat-title">{{ cat }}</div>
+        @for (skill of byCategory(cat); track skill.name) {
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-level">{{ skill.level }}</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" [style.width]="skill.level + '%'"></div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</section>

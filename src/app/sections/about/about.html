@@ -1,0 +1,53 @@
+<section id="about" class="about-section section-base">
+  <div class="section-header">
+    <div class="section-label">
+      <div class="section-icon">◉</div>
+      <span>À propos</span>
+    </div>
+    <app-mascot outfit="about" [size]="280"/>
+  </div>
+  <h2 class="section-h2">Qui suis-je</h2>
+
+  <div class="about-grid">
+    <div class="about-text">
+      @for (p of profile.bio; track p) {
+        <p class="about-p">{{ p }}</p>
+      }
+      <div class="about-tags">
+        @for (tag of tags; track tag) {
+          <span class="tag">{{ tag }}</span>
+        }
+      </div>
+    </div>
+
+    <div class="about-card">
+      <div class="card-title">En ce moment</div>
+      <div class="card-row">
+        <span class="card-key">Poste</span>
+        <span class="card-val">{{ profile.currently.role }}</span>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-row">
+        <span class="card-key">Stack</span>
+        <div class="card-tags">
+          @for (s of profile.currently.stack; track s) {
+            <span class="tag tag-sm">{{ s }}</span>
+          }
+        </div>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-row">
+        <span class="card-key">J'apprends</span>
+        <span class="card-val">{{ profile.currently.learning }}</span>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-row">
+        <span class="card-key">Dispo</span>
+        <span class="card-val avail">
+          <span class="avail-dot"></span>
+          {{ profile.currently.available ? 'Disponible' : 'Occupé' }}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

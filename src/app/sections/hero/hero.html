@@ -1,0 +1,34 @@
+<section id="hero" class="hero-section">
+  <div class="hero-content">
+    <p class="hero-kicker">{{ profile.kicker }}</p>
+    <h1 class="hero-h1">
+      Ingénieur<br>
+      <em class="hero-em">Lille</em>
+    </h1>
+    <p class="hero-bio">{{ profile.bio[0] }}</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">Voir les projets</a>
+      <a href="#contact" class="btn-secondary">Me contacter</a>
+    </div>
+    <div class="hero-stats">
+      @for (stat of profile.stats; track stat.label) {
+        <div class="stat">
+          <span class="stat-value">{{ stat.value }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="hero-figure reg-mark">
+    <span class="rm-bl">+</span><span class="rm-br">+</span>
+    <div class="hero-blob"></div>
+    <div class="hero-mascot-wrap">
+      <img src="mascot/photo.png" alt="Tiago"/>
+    </div>
+    <!-- Speech bubble -->
+    <div class="hero-bubble">
+      <span>Salut, je suis Tiago !</span>
+    </div>
+  </div>
+</section>

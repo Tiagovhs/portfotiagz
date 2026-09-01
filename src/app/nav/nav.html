@@ -1,0 +1,48 @@
+<!-- Desktop rail -->
+<nav class="nav-rail" aria-label="Navigation principale">
+  <div class="nav-brand">
+    <span class="brand-monogram">T</span>
+    <span class="brand-name">portfoTiagz</span>
+  </div>
+
+  <div class="nav-items-wrap">
+    <!-- Sliding mascot -->
+    <div class="nav-mascot-track" [style.transform]="'translateY(' + activeIndex() * 46 + 'px)'">
+      <app-mascot [outfit]="navItems[activeIndex()].outfit" [size]="36" style="color: var(--accent)"/>
+    </div>
+
+    <ul class="nav-items">
+      @for (item of navItems; track item.id; let i = $index) {
+        <li>
+          <button
+            class="nav-item"
+            [class.active]="activeIndex() === i"
+            (click)="scrollTo(i, item.id)"
+            [attr.aria-current]="activeIndex() === i ? 'page' : null"
+          >
+            <span class="nav-icon">{{ item.icon === 'home' ? '⌂' : item.icon === 'person' ? '◉' : item.icon === 'code' ? '⌨' : item.icon === 'work' ? '◈' : item.icon === 'folder' ? '◫' : item.icon === 'school' ? '◎' : '✉' }}</span>
+            <span class="nav-label">{{ item.label }}</span>
+          </button>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div class="nav-footer">
+    <span class="nav-footer-text">© 2025 Tiago</span>
+  </div>
+</nav>
+
+<!-- Mobile bottom bar -->
+<nav class="nav-mobile" aria-label="Navigation mobile">
+  @for (item of navItems.slice(0,4); track item.id; let i = $index) {
+    <button
+      class="nav-mobile-item"
+      [class.active]="activeIndex() === i"
+      (click)="scrollTo(i, item.id)"
+    >
+      <app-mascot [outfit]="item.outfit" [size]="22" [style.color]="activeIndex() === i ? 'var(--accent)' : 'var(--muted)'"/>
+      <span class="nav-mobile-label">{{ item.label }}</span>
+    </button>
+  }
+</nav>

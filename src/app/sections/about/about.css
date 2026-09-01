@@ -1,0 +1,39 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-p { color: var(--muted); line-height: 1.7; margin: 0 0 16px; }
+.about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+
+.about-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  background: var(--accent-50);
+}
+
+.card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.card-row { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; }
+.card-divider { height: 1px; background: var(--line); }
+.card-key { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); width: 72px; flex-shrink: 0; padding-top: 2px; }
+.card-val { font-size: 14px; color: var(--ink); }
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.avail { display: flex; align-items: center; gap: 6px; color: #2d7a3a; }
+.avail-dot { width: 7px; height: 7px; border-radius: 999px; background: #2d7a3a; }
+
+@media (max-width: 1023px) {
+  .about-grid { grid-template-columns: 1fr; }
+}

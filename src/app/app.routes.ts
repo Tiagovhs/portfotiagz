@@ -1,7 +1,9 @@
 import { Routes } from '@angular/router';
-import { Tiago } from './tiago/tiago';
+import { HomeComponent } from './pages/home/home';
+import { ProjectDetailComponent } from './pages/project-detail/project-detail';
 
 export const routes: Routes = [
-    { path: 'tiago', component: Tiago },
-
+  { path: '', component: HomeComponent },
+  { path: 'projets/:slug', component: ProjectDetailComponent },
+  { path: '**', redirectTo: '' },
 ];
