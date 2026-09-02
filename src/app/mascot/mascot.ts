@@ -1,6 +1,6 @@
 import { Component, input, computed } from '@angular/core';
 
-export type MascotOutfit = 'hero' | 'about' | 'skills' | 'experience' | 'projects' | 'education' | 'contact';
+export type MascotOutfit = 'hero' | 'about' | 'skills' | 'experience' | 'projects' | 'education' | 'contact' | 'passions';
 
 const OUTFIT_IMAGES: Record<MascotOutfit, string> = {
   hero:       'mascot/photo.png',
@@ -10,6 +10,7 @@ const OUTFIT_IMAGES: Record<MascotOutfit, string> = {
   projects:   'mascot/TiagzBasket.png',
   education:  'mascot/tiagzDiplome.png',
   contact:    'mascot/TiagzPassion.png',
+  passions:   'mascot/TiagzPassion.png',
 };
 
 @Component({

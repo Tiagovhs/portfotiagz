@@ -33,6 +33,8 @@
 
 .avail { display: flex; align-items: center; gap: 6px; color: #2d7a3a; }
 .avail-dot { width: 7px; height: 7px; border-radius: 999px; background: #2d7a3a; }
+.avail.unavail { color: var(--accent); }
+.avail.unavail .avail-dot { background: var(--accent); }
 
 @media (max-width: 1023px) {
   .about-grid { grid-template-columns: 1fr; }

@@ -6,11 +6,12 @@ import { ExperienceComponent } from '../../sections/experience/experience';
 import { ProjectsComponent } from '../../sections/projects/projects';
 import { EducationComponent } from '../../sections/education/education';
 import { ContactComponent } from '../../sections/contact/contact';
+import { PassionsComponent } from '../../sections/passions/passions';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroComponent, AboutComponent, SkillsComponent, ExperienceComponent, ProjectsComponent, EducationComponent, ContactComponent],
+  imports: [HeroComponent, AboutComponent, SkillsComponent, ExperienceComponent, ProjectsComponent, EducationComponent, ContactComponent, PassionsComponent],
   templateUrl: './home.html',
 })
 export class HomeComponent implements OnInit, OnDestroy {

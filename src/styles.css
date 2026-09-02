@@ -41,7 +41,7 @@ h1,h2,h3,h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; tex
 
 .tag-sm { height: 20px; padding: 0 8px; font-size: 10px; }
 
-.section-base { padding: 80px 56px; border-top: 1px solid var(--line); }
+.section-base { padding: 80px 56px; border-top: 1px solid var(--line); position: relative; }
 .section-base:first-child { border-top: none; }
 
 .section-header {
@@ -49,6 +49,19 @@ h1,h2,h3,h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; tex
   align-items: center;
   justify-content: space-between;
   margin-bottom: 8px;
+}
+
+/* Mascot : positionné par rapport à la section, tout à droite, au-dessus de tout */
+.section-header app-mascot {
+  position: absolute;
+  right: 0;
+  top: 80px; /* aligne avec le padding-top de la section */
+  z-index: 10;
+  pointer-events: none;
+}
+
+@media (max-width: 1023px) {
+  .section-header app-mascot { display: none; }
 }
 
 .section-label {

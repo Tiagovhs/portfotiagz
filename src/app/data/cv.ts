@@ -34,6 +34,7 @@ export interface Project {
   contribution: string;
   result: string;
   repo?: string;
+  link?: string;
 }
 
 export interface Education {
@@ -53,7 +54,7 @@ export const profile: Profile = {
   ],
   stats: [
     { value: '+2 ans', label: "d'expérience" },
-    { value: '5+', label: 'projets' },
+    { value: '8+', label: 'projets' },
     { value: 'Lille', label: 'France' },
   ],
   currently: {
@@ -178,21 +179,21 @@ export const projects: Project[] = [
     result: 'Projet livré en 3 semaines, présenté et démontré, APK fonctionnel sur Android.',
   },
   {
-    slug: 'basket4ballers-api',
+    slug: 'basket4ballers',
     num: '04',
-    year: '2024',
-    title: 'Basket4Ballers API',
+    year: '2026',
+    title: 'Basket4Ballers',
     description:
-      'API Spring Boot scraping les données produit Basket4Ballers (JSoup), avec authentification JWT et cache PostgreSQL.',
-    tags: ['Spring Boot', 'JSoup', 'JWT', 'PostgreSQL'],
-    category: 'API',
+      'Application full-stack de consultation de données NBA — joueurs et sneakers. Backend Java avec scraping, frontend TypeScript.',
+    tags: ['Java', 'Spring Boot', 'TypeScript', 'JSoup', 'JWT', 'PostgreSQL'],
+    category: 'Web',
     problem:
-      "Basket4Ballers ne propose pas d'API publique. Besoin d'accéder aux données produit de façon programmatique.",
+      "Accéder de façon programmatique aux données NBA (joueurs, sneakers) et les exposer via une interface moderne sans API officielle disponible.",
     contribution:
-      'Scraping JSoup, modélisation JPA, endpoints REST documentés OpenAPI, sécurité JWT, tests intégration.',
+      'Backend Java Spring Boot avec scraping JSoup, modélisation JPA, authentification JWT, cache PostgreSQL, endpoints documentés OpenAPI. Frontend TypeScript pour la consultation des données.',
     result:
-      'API fonctionnelle, < 200ms par requête en cache, 100% des endpoints documentés Swagger.',
-    repo: 'github.com/Tiagovhs/basket4ballers-api',
+      'Application full-stack fonctionnelle, API < 200ms par requête en cache, frontend connecté.',
+    repo: 'github.com/Tiagovhs/basket4ballers-backend',
   },
   {
     slug: 'portfotiagz',
@@ -208,7 +209,57 @@ export const projects: Project[] = [
     contribution:
       'Conception du design système, architecture Angular standalone + signaux, pipeline CI/CD complet.',
     result: 'Site déployé en production via GHCR, temps de build < 2 min, Lighthouse > 95.',
-    repo: 'github.com/Tiagovhs/portfoTiagz',
+    repo: 'github.com/Tiagovhs/portfotiagz',
+  },
+  {
+    slug: 'bgrmtiagz',
+    num: '06',
+    year: '2026',
+    title: 'bgrmTiagz',
+    description:
+      'Outil web de suppression de fond d\'image — traitement entièrement côté client, aucune donnée envoyée à un serveur.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    category: 'Outils',
+    problem:
+      'Avoir un outil simple et rapide pour supprimer le fond d\'une image sans dépendre d\'un service tiers payant ou d\'un upload serveur.',
+    contribution:
+      'Développement d\'un outil standalone en HTML/CSS/JS avec traitement côté client, interface minimaliste, utilisable directement depuis le navigateur.',
+    result:
+      'Outil fonctionnel en quelques Ko, utilisable hors-ligne, zéro upload serveur.',
+    repo: 'github.com/Tiagovhs/bgrmTiagz',
+  },
+  {
+    slug: 'valitech',
+    num: '07',
+    year: '2026',
+    title: 'Sites Valitech',
+    description:
+      'Deux sites vitrines pour Valitech Maintenance (maintenance industrielle) et ValiCycle (réparation vélo à domicile) — Mouscron, Belgique.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'SEO', 'Schema.org'],
+    category: 'Web',
+    problem:
+      'Créer une présence web professionnelle pour deux activités distinctes, avec un référencement local optimisé pour attirer des clients dans un rayon de 25 km.',
+    contribution:
+      'Conception et développement des deux sites statiques, balisage Schema.org (LocalBusiness, OfferCatalog, OpeningHoursSpecification) pour le SEO local, design responsive, formulaire de contact.',
+    result:
+      'Deux sites en production avec données structurées Schema.org pour un référencement local optimisé.',
+    link: 'valitech-maintenance.com',
+  },
+  {
+    slug: 'homeserver',
+    num: '08',
+    year: '2026',
+    title: 'Serveur & CI/CD perso',
+    description:
+      'Infrastructure personnelle : VPS Linux avec déploiement continu automatique via GitHub Actions, GHCR et Watchtower.',
+    tags: ['Docker', 'GitHub Actions', 'GHCR', 'Watchtower', 'Nginx', 'Linux'],
+    category: 'Outils',
+    problem:
+      "Héberger ses propres projets de façon autonome avec un pipeline entièrement automatisé — zéro intervention manuelle à chaque mise en production.",
+    contribution:
+      'VPS Linux avec Docker et Nginx comme reverse proxy. Pipeline GitHub Actions : build de l\'image Docker et push vers GHCR à chaque push sur main. Watchtower surveille GHCR, détecte les nouvelles images et redémarre les conteneurs automatiquement.',
+    result:
+      'Pipeline push-to-deploy entièrement automatisé : un git push suffit pour mettre à jour un projet en production en moins de 2 minutes.',
   },
 ];
 

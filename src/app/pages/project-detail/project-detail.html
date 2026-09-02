@@ -21,6 +21,12 @@
           <a [href]="'https://' + p.repo" target="_blank" rel="noopener" class="meta-link">{{ p.repo }}</a>
         </div>
       }
+      @if (p.link) {
+        <div class="meta-item">
+          <span class="meta-key">Site</span>
+          <a [href]="'https://' + p.link" target="_blank" rel="noopener" class="meta-link">{{ p.link }}</a>
+        </div>
+      }
     </div>
 
     <div class="detail-capture reg-mark">

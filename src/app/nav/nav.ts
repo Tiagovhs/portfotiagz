@@ -26,6 +26,7 @@ export class NavComponent {
     { id: 'experience', label: 'Expérience', icon: 'work', outfit: 'experience' },
     { id: 'projects', label: 'Projets', icon: 'folder', outfit: 'projects' },
     { id: 'education', label: 'Formation', icon: 'school', outfit: 'education' },
+    { id: 'passions', label: 'Passions', icon: 'favorite', outfit: 'passions' },
     { id: 'contact', label: 'Contact', icon: 'mail', outfit: 'contact' },
   ];
 

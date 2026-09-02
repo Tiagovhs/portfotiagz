@@ -1,0 +1,104 @@
+<section id="passions" class="section-base">
+  <div class="section-header">
+    <div class="section-label">
+      <div class="section-icon">♪</div>
+      <span>Passions</span>
+    </div>
+    <app-mascot outfit="passions" [size]="280"/>
+  </div>
+  <h2 class="section-h2">Collections</h2>
+
+  <div class="pas-grid">
+
+    <!-- ── Vinyles ── -->
+    <div class="pas-card reg-mark">
+      <span class="rm-bl">+</span><span class="rm-br">+</span>
+
+      <div class="pas-card-head">
+        <div class="pas-card-title">
+          <span class="pas-dot vinyl-dot"></span>Vinyles
+        </div>
+        <a class="pas-link" href="https://www.discogs.com/user/Tiagovhs/collection" target="_blank" rel="noopener">Discogs ↗</a>
+      </div>
+
+      <div class="pas-stat-row">
+        <div class="pas-stat">
+          <div class="pas-num">36</div>
+          <div class="pas-unit">vinyles</div>
+        </div>
+      </div>
+      <div class="pas-since">Collectionneur depuis sept. 2024 · dernier ajout le 25.05.26</div>
+
+      <div class="pas-divider"></div>
+      <div class="pas-sub-label">Derniers ajouts</div>
+
+      <ul class="pas-list">
+        @for (v of vinylRecent; track v.title) {
+          <li class="pas-item">
+            <div class="pas-item-main">
+              <span class="pas-artist">{{ v.artist }}</span>
+              <span class="pas-title-text">{{ v.title }}</span>
+            </div>
+            <div class="pas-item-meta">
+              <span class="tag tag-sm">{{ v.format }}</span>
+              {{ v.date }}
+            </div>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <!-- ── Mangas ── -->
+    <div class="pas-card reg-mark">
+      <span class="rm-bl">+</span><span class="rm-br">+</span>
+
+      <div class="pas-card-head">
+        <div class="pas-card-title">
+          <span class="pas-dot manga-dot"></span>Mangas
+        </div>
+        <a class="pas-link" href="https://www.mangacollec.com/user/kyoraku02/collection" target="_blank" rel="noopener">Manga Collec ↗</a>
+      </div>
+
+      <div class="pas-stat-row">
+        <div class="pas-stat">
+          <div class="pas-num">680</div>
+          <div class="pas-unit">tomes</div>
+        </div>
+        <div class="pas-stat secondary">
+          <div class="pas-num">49</div>
+          <div class="pas-unit">séries</div>
+        </div>
+        <div class="pas-stat secondary">
+          <div class="pas-num">13,9</div>
+          <div class="pas-unit">tomes / série</div>
+        </div>
+      </div>
+      <div class="pas-since">Collectionneur depuis 2008</div>
+
+      <div class="pas-divider"></div>
+      <div class="pas-covers-head">
+        <div class="pas-sub-label">Series de l'étagère</div>
+        <button class="pas-shuffle" type="button" [disabled]="loading()" (click)="drawCovers()" aria-label="Tirer d'autres séries">
+          ⟲ mélanger
+        </button>
+      </div>
+
+      <div class="pas-covers" [class.loading]="loading()">
+        @for (cover of covers(); track cover.title; let i = $index) {
+          <div class="pas-cover" [style.background]="cover.imageUrl ? 'transparent' : cover.color">
+            @if (cover.imageUrl) {
+              <img class="pas-cover-img" [src]="cover.imageUrl" [alt]="cover.title" loading="lazy">
+            } @else {
+              <span class="pas-cover-label">{{ cover.title }}</span>
+            }
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pas-footer">
+    <span>Sources : Discogs &amp; Manga Collec · covers via AniList</span>
+  </div>
+</section>
