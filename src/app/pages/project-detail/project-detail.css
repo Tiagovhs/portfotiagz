@@ -29,6 +29,7 @@
 .meta-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .meta-link { color: var(--accent); text-decoration: none; font-size: 14px; }
 .meta-link:hover { text-decoration: underline; }
+.meta-links { display: flex; flex-direction: column; gap: 4px; }
 
 .detail-capture {
   height: 0;

@@ -35,6 +35,7 @@ export interface Project {
   result: string;
   repo?: string;
   link?: string;
+  links?: string[];
 }
 
 export interface Education {
@@ -186,14 +187,15 @@ export const projects: Project[] = [
     description:
       'Application full-stack de consultation de données NBA — joueurs et sneakers. Backend Java avec scraping, frontend TypeScript.',
     tags: ['Java', 'Spring Boot', 'TypeScript', 'JSoup', 'JWT', 'PostgreSQL'],
-    category: 'Web',
+    category: 'API',
     problem:
-      "Accéder de façon programmatique aux données NBA (joueurs, sneakers) et les exposer via une interface moderne sans API officielle disponible.",
+      'Accéder de façon programmatique aux données NBA (joueurs, sneakers) et les exposer via une interface moderne sans API officielle disponible.',
     contribution:
       'Backend Java Spring Boot avec scraping JSoup, modélisation JPA, authentification JWT, cache PostgreSQL, endpoints documentés OpenAPI. Frontend TypeScript pour la consultation des données.',
     result:
       'Application full-stack fonctionnelle, API < 200ms par requête en cache, frontend connecté.',
     repo: 'github.com/Tiagovhs/basket4ballers-backend',
+    link: 'basket.tiagovalinhas.fr',
   },
   {
     slug: 'portfotiagz',
@@ -217,15 +219,14 @@ export const projects: Project[] = [
     year: '2026',
     title: 'bgrmTiagz',
     description:
-      'Outil web de suppression de fond d\'image — traitement entièrement côté client, aucune donnée envoyée à un serveur.',
+      "Outil web de suppression de fond d'image — traitement entièrement côté client, aucune donnée envoyée à un serveur.",
     tags: ['HTML', 'CSS', 'JavaScript'],
     category: 'Outils',
     problem:
-      'Avoir un outil simple et rapide pour supprimer le fond d\'une image sans dépendre d\'un service tiers payant ou d\'un upload serveur.',
+      "Avoir un outil simple et rapide pour supprimer le fond d'une image sans dépendre d'un service tiers payant ou d'un upload serveur.",
     contribution:
-      'Développement d\'un outil standalone en HTML/CSS/JS avec traitement côté client, interface minimaliste, utilisable directement depuis le navigateur.',
-    result:
-      'Outil fonctionnel en quelques Ko, utilisable hors-ligne, zéro upload serveur.',
+      "Développement d'un outil standalone en HTML/CSS/JS avec traitement côté client, interface minimaliste, utilisable directement depuis le navigateur.",
+    result: 'Outil fonctionnel en quelques Ko, utilisable hors-ligne, zéro upload serveur.',
     repo: 'github.com/Tiagovhs/bgrmTiagz',
   },
   {
@@ -243,7 +244,7 @@ export const projects: Project[] = [
       'Conception et développement des deux sites statiques, balisage Schema.org (LocalBusiness, OfferCatalog, OpeningHoursSpecification) pour le SEO local, design responsive, formulaire de contact.',
     result:
       'Deux sites en production avec données structurées Schema.org pour un référencement local optimisé.',
-    link: 'valitech-maintenance.com',
+    links: ['valitech-maintenance.com', 'cycle.valitech-maintenance.com'],
   },
   {
     slug: 'homeserver',
@@ -255,9 +256,9 @@ export const projects: Project[] = [
     tags: ['Docker', 'GitHub Actions', 'GHCR', 'Watchtower', 'Nginx', 'Linux'],
     category: 'Outils',
     problem:
-      "Héberger ses propres projets de façon autonome avec un pipeline entièrement automatisé — zéro intervention manuelle à chaque mise en production.",
+      'Héberger ses propres projets de façon autonome avec un pipeline entièrement automatisé — zéro intervention manuelle à chaque mise en production.',
     contribution:
-      'VPS Linux avec Docker et Nginx comme reverse proxy. Pipeline GitHub Actions : build de l\'image Docker et push vers GHCR à chaque push sur main. Watchtower surveille GHCR, détecte les nouvelles images et redémarre les conteneurs automatiquement.',
+      "VPS Linux avec Docker et Nginx comme reverse proxy. Pipeline GitHub Actions : build de l'image Docker et push vers GHCR à chaque push sur main. Watchtower surveille GHCR, détecte les nouvelles images et redémarre les conteneurs automatiquement.",
     result:
       'Pipeline push-to-deploy entièrement automatisé : un git push suffit pour mettre à jour un projet en production en moins de 2 minutes.',
   },
@@ -268,7 +269,7 @@ export const education: Education[] = [
     dates: '2024 – 2026',
     degree: 'Master Informatique MSC Pro',
     school: 'Epitech, Lille',
-    note: 'En cours (alternance)',
+    note: 'Diplômé (alternance)',
   },
   {
     dates: '2021 – 2024',

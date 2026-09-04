@@ -27,6 +27,16 @@
           <a [href]="'https://' + p.link" target="_blank" rel="noopener" class="meta-link">{{ p.link }}</a>
         </div>
       }
+      @if (p.links) {
+        <div class="meta-item">
+          <span class="meta-key">Sites</span>
+          <div class="meta-links">
+            @for (l of p.links; track l) {
+              <a [href]="'https://' + l" target="_blank" rel="noopener" class="meta-link">{{ l }}</a>
+            }
+          </div>
+        </div>
+      }
     </div>
 
     <div class="detail-capture reg-mark">

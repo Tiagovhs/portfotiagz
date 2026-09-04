@@ -6,7 +6,13 @@
 }
 
 @media (max-width: 767px) {
-  .pas-grid { grid-template-columns: 1fr; }
+  .pas-grid {
+    grid-template-columns: 1fr;
+  }
+  .pas-card {
+    width: 100%;
+    overflow: hidden;
+  }
 }
 
 /* ── Card ── */
@@ -44,20 +50,26 @@
   border-radius: 50%;
   flex: none;
 }
-.vinyl-dot { background: var(--accent); }
-.manga-dot { background: var(--accent-300); }
+.vinyl-dot {
+  background: var(--accent);
+}
+.manga-dot {
+  background: var(--accent-300);
+}
 
 .pas-link {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--muted);
   text-decoration: none;
   border-bottom: 1px solid var(--line);
 }
-.pas-link:hover { color: var(--ink); }
+.pas-link:hover {
+  color: var(--ink);
+}
 
 /* ── Stats ── */
 .pas-stat-row {
@@ -67,7 +79,10 @@
   margin-bottom: 6px;
 }
 
-.pas-stat { display: flex; flex-direction: column; }
+.pas-stat {
+  display: flex;
+  flex-direction: column;
+}
 
 .pas-num {
   font-family: 'Barlow Condensed', sans-serif;
@@ -85,7 +100,7 @@
 .pas-unit {
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   color: var(--muted);
   font-weight: 500;
   margin-top: 2px;
@@ -110,7 +125,7 @@
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   color: var(--accent);
   margin-bottom: 12px;
 }
@@ -130,9 +145,13 @@
   padding: 10px 0;
   border-top: 1px solid var(--line);
 }
-.pas-item:first-child { border-top: none; }
+.pas-item:first-child {
+  border-top: none;
+}
 
-.pas-item-main { min-width: 0; }
+.pas-item-main {
+  min-width: 0;
+}
 
 .pas-artist {
   display: block;
@@ -166,13 +185,15 @@
   justify-content: space-between;
   margin-bottom: 12px;
 }
-.pas-covers-head .pas-sub-label { margin-bottom: 0; }
+.pas-covers-head .pas-sub-label {
+  margin-bottom: 0;
+}
 
 .pas-shuffle {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--muted);
   background: none;
@@ -181,18 +202,24 @@
   padding: 4px 12px;
   cursor: pointer;
 }
-.pas-shuffle:hover { color: var(--ink); border-color: var(--muted); }
-.pas-shuffle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pas-shuffle:hover {
+  color: var(--ink);
+  border-color: var(--muted);
+}
+.pas-shuffle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 
 .pas-covers {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 
 .pas-covers.loading {
-  opacity: .4;
+  opacity: 0.4;
   pointer-events: none;
 }
 
@@ -202,7 +229,7 @@
   border-radius: 6px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .pas-cover-img {
